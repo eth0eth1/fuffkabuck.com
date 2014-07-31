@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrap
+{
+	width:750px;
+	margin:0 auto;
+		
+}
+
+
+/* This sets the default paragraph text style */
+p.small
+{
+	color:#FFF;
+	font:"Myriad Pro";
+	background-color:#111111;
+	text-align:left;
+	line-height:80%;
+}
+
+p.MainBodyTitle
+{
+	color:white;
+	font:"beer";
+	text-align:left;
+	font-size:16px;
+	background-color:#111111;
+	padding:0px;
+
+}
+
+p.MainBodyText
+{
+	color:white;
+	font:"beer";
+	font-size:14px;
+	line-height:125%;
+	background-color:#111111;
+	padding-bottom:0px;
+	padding:0px;
+	word-wrap:normal;
+}
+
+img.SplashImage
+{
+	float:right;
+	word-wrap:normal;
+	height:auto;
+	width:auto;
+	padding:0px;
+	clear:right;
+}
+
+H1.MainTitle
+{
+	color:#fe9a08;
+	font:"beer";
+	font-size:60px;
+	text-align:center;
+	padding:0px;
+	white-space:nowrap;
+}
+
+H1.MenuLink
+{
+	color:#fe9a08;
+	font:"Beer";
+	/* background-color:#111111; */
+	font-size:24px;
+	text-align:center;
+	line-height:20%;
+	padding-top:0px;
+	padding-bottom:25px;
+	text-wrap:none;
+	
+}
+
+H2.ArticleSubHeading
+{
+	color:#815d29;
+	font:Stark;
+	size:16;
+	background-color:#111111;
+	text-align:left;	
+	line-height:20%;
+}
+
+section {
+	width:80%;
+	height:200px;
+	margin: auto;
+	padding: 10px;
+
+}
+#MainBar
+{
+	float:left;
+	width:375px;
+	background:red;
+	
+	
+}
+
+#SideBar
+{
+	float:right;
+	width:375px;
+	background:blue:
+	
+	
+}
