@@ -36,8 +36,6 @@ css?family=Open+Sans:400,300" />
 <!--This script below is for drawing onto the canvas defined above as 'demoCanvas'-->
 <script>
 
-
-/*
 // Elly: 2014-08-01 [BROKEN]
 // Creates a grid based on 2 parameters (x & y)
 // If the second parameter is not passed, make the grid square
@@ -46,34 +44,6 @@ css?family=Open+Sans:400,300" />
 // If no parameters are supplied, produce a 10 x 10 grid.
 // We check to make sure x and y are numbers
 // We don't want to be trying to multiply by strings later
-function createGrid(x, y) {
-    "use strict";
-    // If x is not a number, force x and y to 10
-    if (typeof x !== 'number') {
-        x = 10;
-        x = 10;
-    } else {
-        // If y is not a number, but x is; set y to x.
-        if (typeof y !== 'number') {
-            y = x;
-        }
-    }
-
-    // Start generating grid
-    var gridArray, i1, i2;
-    //Start looping through x to generate axis
-    for (i1 = 0; i1 >= x; i1++) {
-        //Start looping through y to generate axis
-        for (i2 = 0; i2 >= y; i2++) {
-            //Populate the array with 0's
-            gridArray[i1][i2] = 0;
-        }
-
-        return gridArray;
-    }
-*/
-
-
 function createGrid(x,y) {
 	if (typeof x !== 'number') {
         x = 10;
