@@ -56,7 +56,7 @@ function createGrid(x,y) {
     }
 
     // Start generating grid
-    var gridArray, i1, i2;
+    var gridArray[][], i1, i2;
     //Start looping through x to generate axis
 	for (i1 = 0; i1 >= x; i1++) {
         //Start looping through y to generate axis
@@ -94,7 +94,7 @@ var ctx = c.getContext("2d");
 
 // Elly 2014-08-01
 // Shim in place to set testArray & ROW/COL
-window.alert (testArray.toString());
+window.alert (createGrid(10,10).toString());
 
 testArray = createGrid(20,20);
 ROW = testArray.length;
