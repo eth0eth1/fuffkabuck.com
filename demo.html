@@ -13,23 +13,23 @@ css?family=Open+Sans:400,300" />
 <header>
 <h1>Finley Peters | BitPizel </h1>
 <nav class="topnav">
-	<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="about.html">About Me</a></li>
-		<li><a href="work.html">Work</a></li>
-		<li><a href="contact.html"></a></li>
-		<li><a href="demo.html"></a></li>
-	</ul>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html"></a></li>
+        <li><a href="demo.html"></a></li>
+    </ul>
 </nav>
 </header>
 <article>
-	<div class="content">
-		<img class="splash" src="img/splash1.png">
-		<img class="splash" src="img/splash2.png">
-		<img class="splash" src="img/splash3.png">
-		
+    <div class="content">
+        <img class="splash" src="img/splash1.png">
+        <img class="splash" src="img/splash2.png">
+        <img class="splash" src="img/splash3.png">
+        
 <canvas id ="demoCanvas" width="600" height="600" style="border:1px solid #000000;" >
-			Your browser does not support this HTML5 tag, that sucks!
+            Your browser does not support this HTML5 tag, that sucks!
 </canvas>
 <p> This is a test page. For now. </p>
 
@@ -46,45 +46,46 @@ css?family=Open+Sans:400,300" />
 // If no parameters are supplied, produce a 10 x 10 grid.
 // We check to make sure x and y are numbers
 // We don't want to be trying to multiply by strings later
-function createGrid(x,y) {
-	// If x is not a number, force x and y to 10
-	if (typeof x !== 'number') {
-		x = 10;
-		x = 10;
-	} else {
-		// If y is not a number, but x is; set y to x.
-		if (typeof y !== 'number') {
-			y = x;
-		}
-	}
+function createGrid(x, y) {
+    "use strict";
+    // If x is not a number, force x and y to 10
+    if (typeof x !== 'number') {
+        x = 10;
+        x = 10;
+    } else {
+        // If y is not a number, but x is; set y to x.
+        if (typeof y !== 'number') {
+            y = x;
+        }
+    }
 
-	// Start generating grid
-	var gridArray;
-	//Start looping through x to generate axis
-	for (i1 = 0;i1 >= x;i1++) {
-		//Start looping through y to generate axis
-		for (i2 = 0;i2 >= y;i2++) {
-			//Populate the array with 0's
-			gridArray[i1][i2] = 0;
-	}
+    // Start generating grid
+    var gridArray, i1, i2;
+    //Start looping through x to generate axis
+    for (i1 = 0; i1 >= x; i1++) {
+        //Start looping through y to generate axis
+        for (i2 = 0; i2 >= y; i2++) {
+            //Populate the array with 0's
+            gridArray[i1][i2] = 0;
+        }
 
-	return gridArray;
-}
+        return gridArray;
+    }
 
 //This first block of code creates an array and populates it with random numbers
 
 var testArray = [
-				[0,0,0,0,0,0,0,0,0,0],
-				[0,0,0,0,0,0,0,0,0,0],
-				[0,0,0,0,0,0,0,0,0,0],
-				[0,0,0,0,0,0,0,0,0,0],
-				[0,0,0,0,0,0,0,0,0,0],
-				[0,0,0,0,0,0,0,0,0,0],
-				[0,0,0,0,0,0,0,0,0,0],
-				[0,0,0,0,0,0,0,0,0,0],
-				[0,0,0,0,0,0,0,0,0,0],
-				[0,0,0,0,0,0,0,0,0,0],
-				]; //Hard coded grid, for now.
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                ]; //Hard coded grid, for now.
 
 var TILE_WIDTH = 40;
 var TILE_HEIGHT = 40;
@@ -108,36 +109,36 @@ window.setInterval(function(){
 
 function drawColourGrid()
 {
-	for(row=0;row<ROW ;row++){
-			for(col=0;col<COL;col++){
+    for(row=0;row<ROW ;row++){
+            for(col=0;col<COL;col++){
 
-				testArray[row,col] = x;
-				x++;
-				var n = x.toString();
-				hexString = generateColour();
-				ctx.fillStyle=hexString;
-				ctx.fillRect(col * TILE_WIDTH, row * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);		
-				hexString=generateColour;	
-				ctx.fillStyle="black";
-				ctx.font = "18px Calibri";
-				ctx.fillText(n+",", col * TILE_WIDTH, TILE_HEIGHT/2 + row * TILE_HEIGHT);
-				
-			}
-	}
-	x=0;
+                testArray[row,col] = x;
+                x++;
+                var n = x.toString();
+                hexString = generateColour();
+                ctx.fillStyle=hexString;
+                ctx.fillRect(col * TILE_WIDTH, row * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);        
+                hexString=generateColour;    
+                ctx.fillStyle="black";
+                ctx.font = "18px Calibri";
+                ctx.fillText(n+",", col * TILE_WIDTH, TILE_HEIGHT/2 + row * TILE_HEIGHT);
+                
+            }
+    }
+    x=0;
 }
 
 function generateColour(){
 
-	i = '#'+Math.floor(Math.random()*16777215).toString(16);
-	return i;
+    i = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return i;
 }
 
 
 </script>
 
 
-	</div>
+    </div>
 </article>
 </body>
 </html>
