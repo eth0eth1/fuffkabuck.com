@@ -95,8 +95,8 @@ var ctx = c.getContext("2d");
 // Elly 2014-08-01
 // Shim in place to set testArray & ROW/COL
 testArray = createGrid(20,20);
-ROW = createGrid.length;
-COL = createGrid[0].length;
+ROW = testArray.length;
+COL = testArray[0].length;
 //This for loop cycles through, updating values into the array as it works through
 
 ctx.canvas.width = TILE_WIDTH*COL;
