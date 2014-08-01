@@ -75,7 +75,15 @@ function createGrid(x, y) {
 
 
 function createGrid(x,y) {
-	
+	if (typeof x !== 'number') {
+        x = 10;
+        x = 10;
+    } else {
+        // If y is not a number, but x is; set y to x.
+        if (typeof y !== 'number') {
+            y = x;
+        }
+    }
 }
 
 //This first block of code creates an array and populates it with random numbers
