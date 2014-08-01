@@ -45,6 +45,7 @@ css?family=Open+Sans:400,300" />
 // We check to make sure x and y are numbers
 // We don't want to be trying to multiply by strings later
 function createGrid(x,y) {
+	console.log ('createGrid was called');
 	if (typeof x !== 'number') {
         x = 10;
         x = 10;
@@ -94,11 +95,13 @@ var ctx = c.getContext("2d");
 
 // Elly 2014-08-01
 // Shim in place to set testArray & ROW/COL
-window.alert (createGrid(10,10).toString());
-
+window.alert (createGrid(10,10));
+/*
 testArray = createGrid(20,20);
 ROW = testArray.length;
 COL = testArray[0].length;
+*/
+
 //This for loop cycles through, updating values into the array as it works through
 
 ctx.canvas.width = TILE_WIDTH*COL;
