@@ -88,7 +88,15 @@ function createGrid(x,y) {
     // Start generating grid
     var gridArray, i1, i2;
     //Start looping through x to generate axis
+	for (i1 = 0; i1 >= x; i1++) {
+        //Start looping through y to generate axis
+        for (i2 = 0; i2 >= y; i2++) {
+            //Populate the array with 0's
+            gridArray[i1][i2] = 0;
+        }
 
+        return gridArray;
+    }
 }
 
 //This first block of code creates an array and populates it with random numbers
