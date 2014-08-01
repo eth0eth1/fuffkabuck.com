@@ -36,7 +36,7 @@ css?family=Open+Sans:400,300" />
 <!--This script below is for drawing onto the canvas defined above as 'demoCanvas'-->
 <script>
 
-// Elly: 2014-08-01
+// Elly: 2014-08-01 [BROKEN]
 // Creates a grid based on 2 parameters (x & y)
 // If the second parameter is not passed, make the grid square
 // Using the first parameter as both sides
@@ -57,20 +57,20 @@ function createGrid(x,y) {
     }
 
     // Start generating grid
-    var gridArray = [];
+    var gridArray = [[]];
     //Start looping through x to generate axis
-	for (i1 = 0; i1 <= x; i1++) {
+	for (var i1 = x; i1 < x; i1++) {
         //Start looping through y to generate axis
         for (i2 = 0; i2 <= y; i2++) {
             //Populate the array with 0's
-            console.log (i1);
-            console.log (i2);
-
-            gridArray[i1][i2].push=0;
+          
+            gridArray[i1].push(0);
+            console.log (gridArray[i1][i2]);
         }
 
-        return gridArray;
+        
     }
+    return gridArray;
 }
 
 //This first block of code creates an array and populates it with random numbers
@@ -96,9 +96,9 @@ var x = 0;
 var c = document.getElementById("demoCanvas");
 var ctx = c.getContext("2d");
 
-// Elly 2014-08-01
+// Elly 2014-08-01 [BROKEN]
 // Shim in place to set testArray & ROW/COL
-window.alert (createGrid(11,15));
+//window.alert (createGrid(2,2));
 /*
 testArray = createGrid(20,20);
 ROW = testArray.length;
