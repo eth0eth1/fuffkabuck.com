@@ -59,11 +59,11 @@ function createGrid(x,y) {
     // Start generating grid
     var gridArray = [];
     //Start looping through x to generate axis
-	for (i1 = 0; i1 = x; i1++) {
+	for (i1 = 0; i1 <= x; i1++) {
         //Start looping through y to generate axis
-        for (i2 = 0; i2 = y; i2++) {
+        for (i2 = 0; i2 <= y; i2++) {
             //Populate the array with 0's
-            console.log (concat(i1,i2));
+            console.log (i1.concat(i2));
             gridArray[i1][i2] = 0;
         }
 
