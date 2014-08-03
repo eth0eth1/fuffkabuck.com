@@ -1,1 +1,1 @@
-var spinningCube = [width = 10, height = 10, colour = "Red"];
+var spinningCube = {width = 10, height = 10, colour = "Red"};
