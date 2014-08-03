@@ -34,12 +34,16 @@ css?family=Open+Sans:400,300" />
 <p> This is a test page. For now. </p>
 
 <!--This script below is for drawing onto the canvas defined above as 'demoCanvas'-->
-<script>
 
+<script>
 //***************************//
 //*****The import block******//
 //***************************//
-import spinningCube.*;
+var imported = document.createElement('script');
+imported.src = 'testobject.js';
+document.head.appendChild(imported);
+
+import jam.*;
 
 // Elly 2014-08-02
 // Replaced hard coded test array with createGrid function
@@ -89,7 +93,7 @@ function drawColourGrid()
             }
     }
     x=0;
-    console.log("Spinning cube has a width of:".concat(spinningCube.width))
+    console.log("Spinning cube has a width of:".concat(spinningCube.width));
 }
 
 switch(x){

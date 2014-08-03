@@ -1,1 +1,1 @@
-var spinningCube = [max_width:10, max_height:10, colour:"Red";]
+var spinningCube = [width = 10, height = 10, colour = "Red"];
