@@ -1,0 +1,1 @@
+var spinningCube = 10;
