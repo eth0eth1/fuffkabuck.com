@@ -37,20 +37,26 @@ css?family=Open+Sans:400,300" />
 <script>
 
 
-
-var url = "http://api.openweathermap.org/data/2.5/find?q=London&units=metric";
-var client = new XMLHttpRequest();
-var response
-try {
-    client.open("GET", url, false);
-    client.send();
+// See definitions from http://openweathermap.org/weather-conditions
+function getWeather(loc){
+    //var loc = "London"
+    var url = "http://api.openweathermap.org/data/2.5/find?q=" + loc + "&units=metric";
+    var client = new XMLHttpRequest();
+    var response
+    var weather
+    try {
+        client.open("GET", url, false);
+        client.send();
+        response = JSON.parse(client.responseText);
+        weather = response.list[0].weather[0].description;
+    }
+    catch(err){
+        console.log("Failed to get weather")
+    }
+    console.log('Weather: ' + weather);
 }
-catch(err){
-    console.log("Url doesn't work")
-}
-response = JSON.parse(client.responseText);
-console.log(response);
 
+getWeather("Sheffield");
 
 // Elly 2014-08-02
 // Replaced hard coded test array with createGrid function
