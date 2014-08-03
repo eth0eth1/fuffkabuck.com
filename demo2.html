@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/
+css?family=Open+Sans:400,300" />
+<meta charset="UTF-8"/>
+<title>BitPixel About Me</title>
+
+</head>
+
+<body>
+<header>
+<h1>Finley Peters | BitPixel </h1>
+<nav class="topnav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="demo.html">Demo</a></li>
+    </ul>
+</nav>
+</header>
+<article>
+    <div class="content">
+        <img class="splash" src="img/splash1.png">
+        <img class="splash" src="img/splash2.png">
+        <img class="splash" src="img/splash3.png">
+        
+<canvas id ="demoCanvas" width="600" height="600" style="border:1px solid #000000;" >
+            Your browser does not support this HTML5 tag, that sucks!
+</canvas>
+<p> This is a test page. For now. </p>
+
+<!--This script below is for drawing onto the canvas defined above as 'demoCanvas'-->
+<script>
+
+
+
+var url = "http://api.openweathermap.org/data/2.5/find?q=London&units=metric";
+var client = new XMLHttpRequest();
+var response
+try {
+    client.open("GET", url, false);
+    client.send();
+}
+catch(err){
+    console.log("Url doesn't work")
+}
+response = JSON.parse(client.responseText);
+console.log(response);
+
+
+// Elly 2014-08-02
+// Replaced hard coded test array with createGrid function
+var testArray = createGrid(10,5);
+var ROW = testArray.length;
+var COL = testArray[0].length;
+
+var TILE_WIDTH = 40;
+var TILE_HEIGHT = 40;
+var x = 0;
+var c = document.getElementById("demoCanvas");
+var ctx = c.getContext("2d");
+
+// Elly 2014-08-02
+// Shim in place to set testArray & ROW/COL
+//window.alert (createGrid(10,10));
+
+
+//This for loop cycles through, updating values into the array as it works through
+
+ctx.canvas.width = TILE_WIDTH*COL;
+ctx.canvas.height = TILE_HEIGHT*ROW;
+
+drawColourGrid();
+
+window.setInterval(function(){
+  drawColourGrid();
+}, 100);
+
+
+function drawColourGrid()
+{
+    for(row=0;row<ROW ;row++){
+            for(col=0;col<COL;col++){
+
+                testArray[row,col] = x;
+                x++;
+                var n = x.toString();
+                hexString = generateColour();
+                ctx.fillStyle=hexString;
+                ctx.fillRect(col * TILE_WIDTH, row * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);        
+                hexString=generateColour;    
+                ctx.fillStyle="black";
+                ctx.font = "18px Calibri";
+                ctx.fillText(n+",", col * TILE_WIDTH, TILE_HEIGHT/2 + row * TILE_HEIGHT);
+                
+            }
+    }
+    x=0;
+}
+
+function generateColour(){
+
+    i = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return i;
+}
+
+// Elly: 2014-08-02
+// Creates a grid based on 2 parameters (x & y)
+// If the second parameter is not passed, make the grid square
+// Using the first parameter as both sides
+
+// If no parameters are supplied, produce a 10 x 10 grid.
+// We check to make sure x and y are numbers
+// We don't want to be trying to multiply by strings later
+function createGrid(x,y) {
+    console.log ('createGrid was called with '.concat(x).concat(' and ').concat(y));
+    if (typeof x !== 'number') {
+        x = 10;
+        y = 10;
+    } else {
+        // If y is not a number, but x is; set y to x.
+        if (typeof y !== 'number') {
+            y = x;
+        }
+    }
+
+    // Start generating grid
+    var gridArray = [[]];
+    // Start looping through x to generate axis
+    for (var i1 = 0; i1 < x; i1++) {
+        // Define each point on the x axis as an array
+        gridArray[i1] = [];
+        //Start looping through y to generate axis
+        for (var i2 = 0; i2 < y; i2++) {
+            // Populate the array with 0's
+           gridArray[i1].push(0);
+        }
+    }
+    return gridArray;
+}
+
+
+</script>
+
+
+    </div>
+</article>
+</body>
+</html>
