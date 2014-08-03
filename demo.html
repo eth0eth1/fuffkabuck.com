@@ -43,7 +43,7 @@ var imported = document.createElement('script');
 imported.src = 'testobject.js';
 document.head.appendChild(imported);
 
-//import jam.*;
+
 console.log(spinningCube)
 // Elly 2014-08-02
 // Replaced hard coded test array with createGrid function
@@ -94,43 +94,33 @@ function drawColourGrid()
     }
     x=0;
     console.log("Spinning cube has a width of: " + spinningCube.width);
+    switchWeather("Rainy day");
 }
 
-switch(x){
+//Function that contains a switch to search for substring matches within the stored weather descriptions taken from the API
+function switchWeather(str){
 
-    case 0:
-            console.log("Case ID was 0");
+    switch(true){
+
+    case /rain/.test(str):
+              console.log("Matched 'Rain'");
             break;
-    case 1:
-            console.log("Case ID was 1");
+
+    case /sun/.test(str):
+                console.log("Matched 'sun'");
             break;
-    case 2:
-            console.log("Case ID was 2");
+
+    case /cloud/.test(str):
+                console.log("Matched 'cloud'");
             break;
-    case 3:
-            console.log("Case ID was 3");
+
+    case /thunder/.test(str):
+                console.log("Matched 'thunder'");
             break;
-    case 4:
-            console.log("Case ID was 4");
-            break;
-    case 5:
-            console.log("Case ID was 5");
-            break;
-    case 6:
-            console.log("Case ID was 6");
-            break;
-    case 7:
-            console.log("Case ID was 7");
-            break;
-    case 8:
-            console.log("Case ID was 8");
-            break;
-    case 9:
-            console.log("Case ID was 9");
-            break;
-    case 10:
-            console.log("Case ID was 10");
-            break;
+
+    default:
+            console.log("Matched nothing, do a default thing or whatever")
+        }
 }
 
 function generateColour(){
