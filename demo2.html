@@ -51,12 +51,13 @@ function getWeather(loc){
         weather = response.list[0].weather[0].description;
     }
     catch(err){
-        console.log("Failed to get weather")
+        console.log("Failed to get weather, defaulting to Rain");
+        weather = "Rain";
     }
     console.log('Weather: ' + weather);
 }
 
-getWeather("Sheffield");
+getWeather("London");
 
 // Elly 2014-08-02
 // Replaced hard coded test array with createGrid function
