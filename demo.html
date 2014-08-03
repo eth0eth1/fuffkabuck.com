@@ -56,6 +56,7 @@ var TILE_HEIGHT = 40;
 var x = 0;
 var c = document.getElementById("demoCanvas");
 var ctx = c.getContext("2d");
+var weather = "rain";
 
 // Elly 2014-08-02
 // Shim in place to set testArray & ROW/COL
@@ -135,8 +136,14 @@ switch(x){
 
 function generateColour(){
 
-    i = '#'+Math.floor(Math.random()*16777215).toString(16);
-    return i;
+    //Produced the color
+    rndcolor = "#"+Math.floor(Math.random()*16777215).toString(16);
+    //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1FF$3$4"); //Red Channel
+    //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2FF$4"); //Green Channel
+    var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2$3FF"); //Blue Channel
+
+    //console.log(color);
+    return color;
 }
 
 // Elly: 2014-08-02
@@ -173,6 +180,33 @@ function createGrid(x,y) {
     }
     return gridArray;
 }
+
+// Elly: 2014-08-03
+// Function for getting current weather of location as a string.
+function getWeather(loc){
+    
+
+    // See definitions from http://openweathermap.org/weather-conditions
+    var url = "http://api.openweathermap.org/data/2.5/find?q=" + loc + "&units=metric";
+    // Initialise the HTTP request client
+    var client = new XMLHttpRequest();
+
+    //
+    var weather
+    try {
+        client.open("GET", url, false);
+        client.send();
+        var response = JSON.parse(client.responseText);
+        weather = response.list[0].weather[0].description;
+    }
+    catch(err){
+        console.log("Failed to get weather, defaulting to Rain");
+        weather = "Rain";
+    }
+    console.log('Weather: ' + weather);
+}
+
+getWeather("London");
 
 
 </script>
