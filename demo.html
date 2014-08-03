@@ -129,8 +129,8 @@ function generateColour(){
     //Produced the color
     rndcolor = "#"+Math.floor(Math.random()*16777215).toString(16);
     //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1FF$3$4"); //Red Channel
-    //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2FF$4"); //Green Channe
-    var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2$3FF"); //Blue Channel
+    var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2FF$4"); //Green Channe
+    //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2$3FF"); //Blue Channel
 
     //console.log(color);
     return color;
