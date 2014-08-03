@@ -34,7 +34,7 @@ css?family=Open+Sans:400,300" />
 <p> This is a test page. For now. </p>
 
 <!--This script below is for drawing onto the canvas defined above as 'demoCanvas'-->
-
+<script src="testobject.js"> </script>
 <script>
 //***************************//
 //*****The import block******//
@@ -43,8 +43,8 @@ var imported = document.createElement('script');
 imported.src = 'testobject.js';
 document.head.appendChild(imported);
 
-import jam.*;
-
+//import jam.*;
+console.log(spinningCube)
 // Elly 2014-08-02
 // Replaced hard coded test array with createGrid function
 var testArray = createGrid(10,5);
