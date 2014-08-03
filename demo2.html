@@ -36,10 +36,21 @@ css?family=Open+Sans:400,300" />
 <!--This script below is for drawing onto the canvas defined above as 'demoCanvas'-->
 <script>
 
-//***************************//
-//*****The import block******//
-//***************************//
-import spinningCube.*;
+
+
+var url = "http://api.openweathermap.org/data/2.5/find?q=London&units=metric";
+var client = new XMLHttpRequest();
+var response
+try {
+    client.open("GET", url, false);
+    client.send();
+}
+catch(err){
+    console.log("Url doesn't work")
+}
+response = JSON.parse(client.responseText);
+console.log(response);
+
 
 // Elly 2014-08-02
 // Replaced hard coded test array with createGrid function
@@ -89,44 +100,6 @@ function drawColourGrid()
             }
     }
     x=0;
-    console.log("Spinning cube has a width of:".concat(spinningCube.width))
-}
-
-switch(x){
-
-    case 0:
-            console.log("Case ID was 0");
-            break;
-    case 1:
-            console.log("Case ID was 1");
-            break;
-    case 2:
-            console.log("Case ID was 2");
-            break;
-    case 3:
-            console.log("Case ID was 3");
-            break;
-    case 4:
-            console.log("Case ID was 4");
-            break;
-    case 5:
-            console.log("Case ID was 5");
-            break;
-    case 6:
-            console.log("Case ID was 6");
-            break;
-    case 7:
-            console.log("Case ID was 7");
-            break;
-    case 8:
-            console.log("Case ID was 8");
-            break;
-    case 9:
-            console.log("Case ID was 9");
-            break;
-    case 10:
-            console.log("Case ID was 10");
-            break;
 }
 
 function generateColour(){
