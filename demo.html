@@ -34,20 +34,20 @@ css?family=Open+Sans:400,300" />
 <p> This is a test page. For now. </p>
 
 <!--This script below is for drawing onto the canvas defined above as 'demoCanvas'-->
-<script src="testobject.js"> </script>
+<script src="testobject.js"> </script>  
 <script>
 //***************************//
 //*****The import block******//
 //***************************//
 var imported = document.createElement('script');
-imported.src = 'testobject.js';
+imported.src = 'blurimage.js';
 document.head.appendChild(imported);
 
 
 console.log(spinningCube)
 // Elly 2014-08-02
 // Replaced hard coded test array with createGrid function
-var testArray = createGrid(10,5);
+var testArray = createGrid(15,15);
 var ROW = testArray.length;
 var COL = testArray[0].length;
 
@@ -68,12 +68,15 @@ var weather = "rain";
 ctx.canvas.width = TILE_WIDTH*COL;
 ctx.canvas.height = TILE_HEIGHT*ROW;
 
+getWeather("London");
+switchWeather(weather);
 drawColourGrid();
 
 window.setInterval(function(){
   drawColourGrid();
 }, 100);
 
+ctx.style.webkitFilter = "blur(10px)";
 
 function drawColourGrid()
 {
@@ -83,40 +86,54 @@ function drawColourGrid()
                 testArray[row,col] = x;
                 x++;
                 var n = x.toString();
-                hexString = generateColour();
+                hexString = switchWeather(weather);
                 ctx.fillStyle=hexString;
-                ctx.fillRect(col * TILE_WIDTH, row * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);        
-                hexString=generateColour;    
-                ctx.fillStyle="black";
-                ctx.font = "18px Calibri";
-                ctx.fillText(n+",", col * TILE_WIDTH, TILE_HEIGHT/2 + row * TILE_HEIGHT);
+                ctx.fillRect(col * TILE_WIDTH, row * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);
+                //ctx.font = "18px Calibri";
+                //ctx.fillStyle="black";
+                //ctx.fillText(n+",", col * TILE_WIDTH, TILE_HEIGHT/2 + row * TILE_HEIGHT);
                 
+                //Text disabled as there seems to be an issue with the fillstyle changing to anticipate the font colour, but several squares sneaking onto the canvas as it runs through. Will investigate in future.
+
             }
     }
     x=0;
-    console.log("Spinning cube has a width of: " + spinningCube.width);
-    switchWeather("Rainy day");
+
+    //Once grid has been laid, possible blurring function to go here. Found http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html for possible use??? Discussion needed! <3
+    //Google came back with the use of webkitFilter for blurring a canvas, too.
 }
 
-//Function that contains a switch to search for substring matches within the stored weather descriptions taken from the API
+
+//Fen 2014-08-04
+//Cleaned up switchWeather and generateColour functions to consolodate them into one super function.
 function switchWeather(str){
+
+    rndcolor = "#"+Math.floor(Math.random()*16777215).toString(16);
 
     switch(true){
 
     case /rain/.test(str):
               console.log("Matched 'Rain'");
+              var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$272FF");
+                return color;
             break;
 
     case /sun/.test(str):
                 console.log("Matched 'sun'");
+                var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1FF$3$4");
+                return color;
             break;
 
     case /cloud/.test(str):
                 console.log("Matched 'cloud'");
+                var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$17272$4");
+                return color;
             break;
 
     case /thunder/.test(str):
                 console.log("Matched 'thunder'");
+                var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$172FF$4");
+                return color;
             break;
 
     default:
@@ -124,15 +141,17 @@ function switchWeather(str){
         }
 }
 
-function generateColour(){
+function generateColour(){ //Now defunct
 
     //Produced the color
     rndcolor = "#"+Math.floor(Math.random()*16777215).toString(16);
-    //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1FF$3$4"); //Red Channel
-    var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2FF$4"); //Green Channe
+    //console.log("random hex code = " + rndcolor);
+    var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1FF$3$4"); //Red Channel
+    //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2FF$4"); //Green Channel
     //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2$3FF"); //Blue Channel
 
     //console.log(color);
+    //console.log("reformed hex code = " + color);
     return color;
 }
 
@@ -195,8 +214,6 @@ function getWeather(loc){
     }
     console.log('Weather: ' + weather);
 }
-
-getWeather("London");
 
 
 </script>
