@@ -47,15 +47,14 @@ document.head.appendChild(imported);
 console.log(spinningCube)
 // Elly 2014-08-02
 // Replaced hard coded test array with createGrid function
-var testArray = createGrid(15,15);
-var ROW = testArray.length;
-var COL = testArray[0].length;
+//var testArray = createGrid(15,15);
+//var ROW = testArray.length;
+//var COL = testArray[0].length;
 
-var TILE_WIDTH = 40;
-var TILE_HEIGHT = 40;
 var tile_width = 40;
 var tile_height = 40;
-var x = 0;
+var gridx = 10
+var gridy = 5
 var c = document.getElementById("demoCanvas");
 var ctx = c.getContext("2d");
 var weather;
@@ -67,13 +66,12 @@ var weather;
 
 //This for loop cycles through, updating values into the array as it works through
 
-ctx.canvas.width = TILE_WIDTH*COL;
-ctx.canvas.height = TILE_HEIGHT*ROW;
+ctx.canvas.width = tile_width*gridx;
+ctx.canvas.height = tile_height*gridy;
 
 getWeather("London");
-getWeather("London");
 switchWeather(weather);
-//drawColourGrid();
+
 generateColorGrid(10,5);
 
 window.setInterval(function(){
@@ -107,68 +105,6 @@ function generateColorGrid(x,y)
         }   
     }
 }
-
-
-// Elly: 2014-08-02
-// Creates a grid based on 2 parameters (x & y)
-// If the second parameter is not passed, make the grid square
-// Using the first parameter as both sides
-
-// If no parameters are supplied, produce a 10 x 10 grid.
-// We check to make sure x and y are numbers
-// We don't want to be trying to multiply by strings later
-function createGrid(x,y) {
-    console.log ('createGrid was called with ' + x + ' and ' + y);
-    if (typeof x !== 'number') {
-        x = 10;
-        y = 10;
-    } else {
-        // If y is not a number, but x is; set y to x.
-        if (typeof y !== 'number') {
-            y = x;
-        }
-    }
-
-    // Start generating grid
-    var gridArray = [[]];
-    // Start looping through x to generate axis
-    for (var i1 = 0; i1 < x; i1++) {
-        // Define each point on the x axis as an array
-        gridArray[i1] = [];
-        //Start looping through y to generate axis
-        for (var i2 = 0; i2 < y; i2++) {
-            // Populate the array with 0's
-           gridArray[i1].push(0);
-        }
-    }
-    return gridArray;
-}
-
-function drawColourGrid()
-{
-    for(row=0;row<ROW ;row++){
-            for(col=0;col<COL;col++){
-
-                testArray[row,col] = x;
-                x++;
-                var n = x.toString();
-                hexString = switchWeather(weather);
-                ctx.fillStyle=hexString;
-                ctx.fillRect(col * TILE_WIDTH, row * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);
-                //ctx.font = "18px Calibri";
-                //ctx.fillStyle="black";
-                //ctx.fillText(n+",", col * TILE_WIDTH, TILE_HEIGHT/2 + row * TILE_HEIGHT);
-                
-                //Text disabled as there seems to be an issue with the fillstyle changing to anticipate the font colour, but several squares sneaking onto the canvas as it runs through. Will investigate in future.
-
-            }
-    }
-    x=0;
-
-    //Once grid has been laid, possible blurring function to go here. Found http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html for possible use??? Discussion needed! <3
-    //Google came back with the use of webkitFilter for blurring a canvas, too.
-}
-
 
 //Fen 2014-08-04
 //Cleaned up switchWeather and generateColour functions to consolodate them into one super function.
@@ -209,21 +145,6 @@ function switchWeather(str){
             console.log("Matched nothing, do a default thing or whatever")
         }
 }
-
-function generateColour(){ //Now defunct
-
-    //Produced the color
-    rndcolor = "#"+Math.floor(Math.random()*16777215).toString(16);
-    //console.log("random hex code = " + rndcolor);
-    var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1FF$3$4"); //Red Channel
-    //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2FF$4"); //Green Channel
-    //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2$3FF"); //Blue Channel
-
-    //console.log(color);
-    //console.log("reformed hex code = " + color);
-    return color;
-}
-
 
 
 // Elly: 2014-08-03
