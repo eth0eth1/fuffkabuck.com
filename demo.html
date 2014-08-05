@@ -111,7 +111,7 @@ function switchWeather(str){
 
 
     rndcolor = "#"+(Math.random().toString(16) + '0000000').slice(2, 8);
-    console.log("random hex code = " + rndcolor);
+    //console.log("random hex code = " + rndcolor);
 
     switch(true){
 
@@ -130,7 +130,7 @@ function switchWeather(str){
     case /cloud/.test(str):
                 console.log("Matched 'cloud'");
                 var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$17272$4");
-                console.log("reformed hex code = " + color);
+                //console.log("reformed hex code = " + color);
                 return color;
             break;
 
