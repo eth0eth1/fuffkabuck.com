@@ -8,6 +8,7 @@
 		
 }
 
+canvas.style.webkitFilter = "blur(50px)";
 
 /* This sets the default paragraph text styl */
 p.small
