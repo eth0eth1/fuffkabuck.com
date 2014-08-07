@@ -51,8 +51,8 @@ var testArray = createGrid(15,15);
 var ROW = testArray.length;
 var COL = testArray[0].length;
 
-var TILE_WIDTH = 40;
-var TILE_HEIGHT = 40;
+//var TILE_WIDTH = 40;
+//var TILE_HEIGHT = 40;
 var tile_width = 40;
 var tile_height = 40;
 var x = 0;
@@ -67,17 +67,16 @@ var weather;
 
 //This for loop cycles through, updating values into the array as it works through
 
-ctx.canvas.width = TILE_WIDTH*COL;
-ctx.canvas.height = TILE_HEIGHT*ROW;
+ctx.canvas.width = tile_width*COL;
+ctx.canvas.height = tile_height*ROW;
 
 getWeather("London");
 getWeather("London");
-switchWeather(weather);
 //drawColourGrid();
-generateColorGrid(10,5);
+//generateColorGrid(10,5);
 
 window.setInterval(function(){
-  generateColorGrid();
+  generateColorGrid(20,20); //Fen: Bumped grid to 20x20 for stress test on CPU
 }, 100);
 
 //ctx.style.webkitFilter = "blur(10px)";
@@ -101,8 +100,9 @@ function generateColorGrid(x,y)
     for(xcount = x; xcount>0; xcount--){
         for(ycount = y; ycount>0; ycount--){
             console.log("X:" + xcount + "Y:" + ycount);
-            hexString = switchWeather(weather);
-            ctx.fillStyle = hexString;
+            colorArray = getColor(weather);
+            //console.log("colorArray = " + colorArray);
+            ctx.fillStyle = "rgb("+colorArray[0]+","+colorArray[1]+","+colorArray[2]+")";
             ctx.fillRect(ycount * tile_width, xcount * tile_height, tile_width, tile_height);  
         }   
     }
@@ -144,7 +144,7 @@ function createGrid(x,y) {
     return gridArray;
 }
 
-function drawColourGrid()
+function drawColourGrid()//Defunct
 {
     for(row=0;row<ROW ;row++){
             for(col=0;col<COL;col++){
@@ -152,8 +152,7 @@ function drawColourGrid()
                 testArray[row,col] = x;
                 x++;
                 var n = x.toString();
-                hexString = switchWeather(weather);
-                ctx.fillStyle=hexString;
+                ctx.fillStyle=getColor(weather);
                 ctx.fillRect(col * TILE_WIDTH, row * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);
                 //ctx.font = "18px Calibri";
                 //ctx.fillStyle="black";
@@ -172,7 +171,10 @@ function drawColourGrid()
 
 //Fen 2014-08-04
 //Cleaned up switchWeather and generateColour functions to consolodate them into one super function.
-function switchWeather(str){
+//Fen 2014-08-07
+//Old switchWeather using exreg now defunt, replaced with streamlined code using RGB values instead of hex. Hopefully more lightweight!
+
+/*function switchWeather(str){
 
 
     rndcolor = "#"+(Math.random().toString(16) + '0000000').slice(2, 8);
@@ -208,6 +210,24 @@ function switchWeather(str){
     default:
             console.log("Matched nothing, do a default thing or whatever")
         }
+//} */
+
+function getColor(str){
+
+rndnum = Math.random();
+
+switch(true){
+
+    default:
+    //console.log("rndnum = "+rndnum);
+    var r = Math.floor((Math.random()*225)+1);
+    var g = Math.floor((Math.random()*225)+1);
+    var b = 255;
+
+    return [r,g,b];
+
+}
+
 }
 
 function generateColour(){ //Now defunct
