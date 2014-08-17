@@ -9,48 +9,34 @@ css?family=Open+Sans:400,300" />
 </head>
 <body>
 
-    <canvas id ="weatherGrid" width="600" height="600" >
+    <canvas id ="weatherGrid">
                 Your browser does not support this HTML5 tag, that sucks!
     </canvas>
 
-<!--This script below is for drawing onto the canvas defined above as 'demoCanvas'-->
-
 <script>
 var ctx = document.getElementById("weatherGrid").getContext("2d");
-
-
-//Work these into the createGrid function
-var tile_width = 20;
-var tile_height = 20;
+ctx.canvas.width = window.innerWidth;
+ctx.canvas.height = window.innerHeight;
 
 //Define this early
 var weather;
+getWeather("Minsk");
 
-//Change canvas size
-ctx.canvas.width = tile_width*100;
-ctx.canvas.height = tile_height*100;
-
-
-getWeather("London");
 
 window.setInterval(function(){
-  generateColorGrid(10,10);
+  generateColorGrid();
 }, 100);
 
 
 function generateColorGrid(x,y)
 {
-    // Check what vars we were called with
-    //console.log ('generateColorGrid was called with ' + x + ' and ' + y);
-    if (typeof x !== 'number') {
-        x = 10;
-        y = 10;
-    } else {
-        // If y is not a number, but x is; set y to x.
-        if (typeof y !== 'number') {
-            y = x;
-        }
-    }
+
+    var tile_width = 50;
+    var tile_height = 50;
+
+    x = Math.ceil(window.innerWidth/tile_width);
+    y = Math.ceil(window.innerHeight/tile_height);
+
     // Loop through x & y values passed
     for(xcount = x; xcount>0; xcount--){
         for(ycount = y; ycount>0; ycount--){
@@ -67,13 +53,19 @@ function getColor(str){
 
     switch(true){
 
-        case /rain/.test(str):
+        case /Rain/.test(str):
         var r = Math.floor((Math.random()*225)+1);
         var g = Math.floor((Math.random()*225)+1);
         var b = 225;
         return [r,g,b];
 
-        case /sun/.test(str):
+        case /Sun/.test(str):
+        var r = 225;
+        var g = Math.floor((Math.random()*225)+1);
+        var b = Math.floor((Math.random()*225)+1);
+        return [r,g,b];
+
+        case /Clear/.test(str):
         var r = 225;
         var g = Math.floor((Math.random()*225)+1);
         var b = Math.floor((Math.random()*225)+1);
