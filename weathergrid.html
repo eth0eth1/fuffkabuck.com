@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/
+css?family=Open+Sans:400,300" />
+<meta charset="UTF-8"/>
+<title>Weathergrid</title>
+</head>
+<body>
+
+    <canvas id ="demoCanvas" width="600" height="600" >
+                Your browser does not support this HTML5 tag, that sucks!
+    </canvas>
+<!--This script below is for drawing onto the canvas defined above as 'demoCanvas'-->
+<script src="testobject.js"> </script>  
+<script>
+//***************************//
+//*****The import block******//
+//***************************//
+var imported = document.createElement('script');
+imported.src = 'blurimage.js';
+document.head.appendChild(imported);
+
+
+console.log(spinningCube)
+// Elly 2014-08-02
+// Replaced hard coded test array with createGrid function
+var testArray = createGrid(15,15);
+var ROW = testArray.length;
+var COL = testArray[0].length;
+
+//var TILE_WIDTH = 40;
+//var TILE_HEIGHT = 40;
+var tile_width = 20;
+var tile_height = 20;
+var x = 0;
+var c = document.getElementById("demoCanvas");
+var ctx = c.getContext("2d");
+var weather;
+
+// Elly 2014-08-02
+// Shim in place to set testArray & ROW/COL
+//window.alert (createGrid(10,10));
+
+
+//This for loop cycles through, updating values into the array as it works through
+
+ctx.canvas.width = tile_width*100;
+ctx.canvas.height = tile_height*100;
+
+getWeather("London");
+getWeather("London");
+//drawColourGrid();
+//generateColorGrid(10,5);
+
+window.setInterval(function(){
+  generateColorGrid(20,20); //Fen: Bumped grid to 20x20 for stress test on CPU
+}, 100);
+
+//ctx.style.webkitFilter = "blur(10px)";
+
+
+//Replaces drawColourGrid and generateGrid
+function generateColorGrid(x,y)
+{
+    // Check what vars we were called with
+    //console.log ('generateColorGrid was called with ' + x + ' and ' + y);
+    if (typeof x !== 'number') {
+        x = 10;
+        y = 10;
+    } else {
+        // If y is not a number, but x is; set y to x.
+        if (typeof y !== 'number') {
+            y = x;
+        }
+    }
+    // Loop through x & y values passed
+    for(xcount = x; xcount>0; xcount--){
+        for(ycount = y; ycount>0; ycount--){
+            //console.log("X:" + xcount + "Y:" + ycount);
+            colorArray = getColor(weather);
+            //console.log("colorArray = " + colorArray);
+            ctx.fillStyle = "rgb("+colorArray[0]+","+colorArray[1]+","+colorArray[2]+")";
+            ctx.fillRect(ycount * tile_width, xcount * tile_height, tile_width, tile_height);  
+        }   
+    }
+}
+
+
+// Elly: 2014-08-02
+// Creates a grid based on 2 parameters (x & y)
+// If the second parameter is not passed, make the grid square
+// Using the first parameter as both sides
+
+// If no parameters are supplied, produce a 10 x 10 grid.
+// We check to make sure x and y are numbers
+// We don't want to be trying to multiply by strings later
+function createGrid(x,y) {
+    //console.log ('createGrid was called with ' + x + ' and ' + y);
+    if (typeof x !== 'number') {
+        x = 10;
+        y = 10;
+    } else {
+        // If y is not a number, but x is; set y to x.
+        if (typeof y !== 'number') {
+            y = x;
+        }
+    }
+
+    // Start generating grid
+    var gridArray = [[]];
+    // Start looping through x to generate axis
+    for (var i1 = 0; i1 < x; i1++) {
+        // Define each point on the x axis as an array
+        gridArray[i1] = [];
+        //Start looping through y to generate axis
+        for (var i2 = 0; i2 < y; i2++) {
+            // Populate the array with 0's
+           gridArray[i1].push(0);
+        }
+    }
+    return gridArray;
+}
+
+function drawColourGrid()//Defunct
+{
+    for(row=0;row<ROW ;row++){
+            for(col=0;col<COL;col++){
+
+                testArray[row,col] = x;
+                x++;
+                var n = x.toString();
+                ctx.fillStyle=getColor(weather);
+                ctx.fillRect(col * TILE_WIDTH, row * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);
+                //ctx.font = "18px Calibri";
+                //ctx.fillStyle="black";
+                //ctx.fillText(n+",", col * TILE_WIDTH, TILE_HEIGHT/2 + row * TILE_HEIGHT);
+                
+                //Text disabled as there seems to be an issue with the fillstyle changing to anticipate the font colour, but several squares sneaking onto the canvas as it runs through. Will investigate in future.
+
+            }
+    }
+    x=0;
+
+    //Once grid has been laid, possible blurring function to go here. Found http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html for possible use??? Discussion needed! <3
+    //Google came back with the use of webkitFilter for blurring a canvas, too.
+}
+
+
+//Fen 2014-08-04
+//Cleaned up switchWeather and generateColour functions to consolodate them into one super function.
+//Fen 2014-08-07
+//Old switchWeather using exreg now defunt, replaced with streamlined code using RGB values instead of hex. Hopefully more lightweight!
+
+/*function switchWeather(str){
+
+
+    rndcolor = "#"+(Math.random().toString(16) + '0000000').slice(2, 8);
+    //console.log("random hex code = " + rndcolor);
+
+    switch(true){
+
+    case /rain/.test(str):
+              //console.log("Matched 'Rain'");
+              var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$272FF");
+                return color;
+            break;
+
+    case /sun/.test(str):
+                console.log("Matched 'sun'");
+                var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1FF$3$4");
+                return color;
+            break;
+
+    case /cloud/.test(str):
+                console.log("Matched 'cloud'");
+                var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$17272$4");
+                //console.log("reformed hex code = " + color);
+                return color;
+            break;
+
+    case /thunder/.test(str):
+                console.log("Matched 'thunder'");
+                var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$172FF$4");
+                return color;
+            break;
+
+    default:
+            console.log("Matched nothing, do a default thing or whatever")
+        }
+//} */
+
+function getColor(str){
+
+
+switch(true){
+
+    case /rain/.test(str):
+    var r = Math.floor((Math.random()*225)+1);
+    var g = Math.floor((Math.random()*225)+1);
+    var b = 225;
+    return [r,g,b];
+
+    case /sun/.test(str):
+    var r = 225;
+    var g = Math.floor((Math.random()*225)+1);
+    var b = Math.floor((Math.random()*225)+1);
+    return [r,g,b];
+
+    case /cloud/.test(str):
+    var r = Math.floor( (Math.random()* (50 - 1) ));
+    var g = Math.floor( (Math.random()* (175- 1) ));
+    var b = 255;
+    return [r,g,b];
+
+    case /ice/.test(str):
+    var r = Math.floor( (Math.random()* (50 - 1) ));
+    var g = Math.floor( (Math.random()* (175- 1) ));
+    var b = 255;
+    return [r,g,b];
+
+    case /thunder/.test(str):
+    var r = Math.floor( (Math.random()* (226 - 75) ));
+    var g = Math.floor((Math.random()*226)+1);
+    var b = Math.floor( (Math.random()* (226 - 75) ));
+    return [r,g,b];
+
+    default:
+    //console.log("rndnum = "+rndnum);
+    var r = Math.floor((Math.random()*225)+1);
+    var g = Math.floor((Math.random()*225)+1);
+    var b = 225;
+
+    return [r,g,b];
+
+}
+
+}
+
+function generateColour(){ //Now defunct
+
+    //Produced the color
+    rndcolor = "#"+Math.floor(Math.random()*16777215).toString(16);
+    //console.log("random hex code = " + rndcolor);
+    var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1FF$3$4"); //Red Channel
+    //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2FF$4"); //Green Channel
+    //var color = rndcolor.replace(/(\#)(.{2})(.{2})(.{2})/g, "$1$2$3FF"); //Blue Channel
+
+    //console.log(color);
+    //console.log("reformed hex code = " + color);
+    return color;
+}
+
+
+
+// Elly: 2014-08-03
+// Function for getting current weather of location as a string.
+function getWeather(loc){
+    
+    if(typeof weather === 'undefined'){
+
+        console.log("Getting weather from the internet...");
+
+    // See definitions from http://openweathermap.org/weather-conditions
+    var url = "http://api.openweathermap.org/data/2.5/find?q=" + loc + "&units=metric";
+    // Initialise the HTTP request client
+    var client = new XMLHttpRequest();
+
+    //
+    weather
+    try {
+        client.open("GET", url, false);
+        client.send();
+        var response = JSON.parse(client.responseText);
+        weather = response.list[0].weather[0].description;
+    }
+    catch(err){
+        console.log("Failed to get weather, defaulting to Rain");
+        weather = "Rain";
+    }
+    console.log('Weather: ' + weather);
+    } else{
+
+        console.log("Weather already set; returning pre-cached weather...");
+
+    }
+
+
+}
+</script>
+
+</body>
+</html>
