@@ -17,38 +17,22 @@ css?family=Open+Sans:400,300" />
 
 <script>
 
-// Elly 2014-08-02
-// Replaced hard coded test array with createGrid function
-
-var testArray = createGrid(15,15);
-var ROW = testArray.length;
-var COL = testArray[0].length;
-
-//var TILE_WIDTH = 40;
-//var TILE_HEIGHT = 40;
+//Work these into the createGrid function
 var tile_width = 20;
 var tile_height = 20;
-var x = 0;
+
 var c = document.getElementById("demoCanvas");
 var ctx = c.getContext("2d");
 var weather;
 
-// Elly 2014-08-02
-// Shim in place to set testArray & ROW/COL
-//window.alert (createGrid(10,10));
-
-
-//This for loop cycles through, updating values into the array as it works through
 
 ctx.canvas.width = tile_width*100;
 ctx.canvas.height = tile_height*100;
 
 getWeather("London");
-//drawColourGrid();
-//generateColorGrid(10,5);
 
 window.setInterval(function(){
-  generateColorGrid(20,20); //Fen: Bumped grid to 20x20 for stress test on CPU
+  generateColorGrid(10,10);
 }, 100);
 
 //ctx.style.webkitFilter = "blur(10px)";
