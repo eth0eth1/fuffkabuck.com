@@ -7,7 +7,7 @@ css?family=Open+Sans:400,300" />
 <meta charset="UTF-8"/>
 <title>Weathergrid</title>
 </head>
-<body>
+<body style="margin:0px;overflow:hidden;">
 
     <canvas id ="weatherGrid">
                 Your browser does not support this HTML5 tag, that sucks!
@@ -15,36 +15,36 @@ css?family=Open+Sans:400,300" />
 
 <script>
 var ctx = document.getElementById("weatherGrid").getContext("2d");
-ctx.canvas.width = window.innerWidth;
-ctx.canvas.height = window.innerHeight;
 
-//Define this early
 var weather;
-getWeather("Minsk");
+getWeather("London");
 
 
 window.setInterval(function(){
   generateColorGrid();
-}, 100);
+}, 150);
 
 
 function generateColorGrid(x,y)
 {
 
+    ctx.canvas.width = window.innerWidth;
+    ctx.canvas.height = window.innerHeight;
+
     var tile_width = 50;
     var tile_height = 50;
 
-    x = Math.ceil(window.innerWidth/tile_width);
-    y = Math.ceil(window.innerHeight/tile_height);
+    y = Math.ceil(window.innerWidth/tile_width);
+    x = Math.ceil(window.innerHeight/tile_height);
 
     // Loop through x & y values passed
     for(xcount = x; xcount>0; xcount--){
         for(ycount = y; ycount>0; ycount--){
-            //console.log("X:" + xcount + "Y:" + ycount);
             colorArray = getColor(weather);
-            //console.log("colorArray = " + colorArray);
+
             ctx.fillStyle = "rgb("+colorArray[0]+","+colorArray[1]+","+colorArray[2]+")";
-            ctx.fillRect(ycount * tile_width, xcount * tile_height, tile_width, tile_height);  
+
+            ctx.fillRect((ycount-1) * tile_width, (xcount-1) * tile_height, tile_width, tile_height);  
         }   
     }
 }
@@ -101,8 +101,6 @@ function getColor(str){
 
 }
 
-// Elly: 2014-08-03
-// Function for getting current weather of location as a string.
 function getWeather(loc){
     
     if(typeof weather === 'undefined'){
@@ -130,10 +128,7 @@ function getWeather(loc){
     } else{
 
         console.log("Weather already set; returning pre-cached weather...");
-
     }
-
-
 }
 </script>
 
