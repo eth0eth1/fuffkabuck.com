@@ -39,7 +39,11 @@ h3 {
 
 }
 
-
+footer {
+	font-size:0.5em;
+	text-align: center;
+	font-style:italic;
+}
 nav  ul {
 	list-style-type:none;
 	margin:0em;
