@@ -10,5 +10,6 @@
 
 	</div>
 </article>
-</body>
-</html>
+<?php 
+require "footer.php";
+?>
