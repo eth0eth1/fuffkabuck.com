@@ -1,4 +1,4 @@
-<?php require "header.php" ?>
+<?php require "header.php"; ?>
 <article>
 	<div class="content">
 		<img class="splash" src="img/splash1.png">
