@@ -1,5 +1,5 @@
 <?php
-  requires("header.php");
+  requires "header.php";
 ?>
 <article>
 	<div class="content">
