@@ -77,8 +77,9 @@ div.content {
 }
 
 .Banner {
-	text-align: center;
-	clear: right;
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .splash {
