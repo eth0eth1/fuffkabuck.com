@@ -1,4 +1,6 @@
-<?php require "header.php"; ?>
+<?php 
+require "header.php";
+?>
 <article>
   <div class="content">
    <img class="splash" src="img/splash1.png">
@@ -11,5 +13,8 @@
    <p> Here's some more text that's not really about anything at all.</p>
   </div>
 </article>
-</body>
-</html>
+
+<?php 
+require "footer.php";
+?>
+
