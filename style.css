@@ -78,6 +78,7 @@ div.content {
 
 .Banner {
 	text-align: center;
+	clear: right;
 }
 
 .splash {
