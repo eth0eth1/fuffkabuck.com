@@ -1,3 +1,3 @@
 <?php
-print("Test");
+print("<html> <body> test2 </body> </html>");
 ?>
