@@ -12,10 +12,10 @@ print("<!DOCTYPE html>
 <h3>E-mail | <a href=\"mailto:petersm@live.co.uk\">Petersm@Live.co.uk</a></h3>
 <nav class=\"topnav\" >
   <ul>
-    <li><a href=\"index.html\">Home</a></li>
-    <li><a href=\"about.html\">About Me</a></li>
-    <li><a href=\"work.html\">Work</a></li>
-    <li><a href=\"demo.html\">Demo</a></li>
+    <li><a href=\"index.php\">Home</a></li>
+    <li><a href=\"about.php\">About Me</a></li>
+    <li><a href=\"work.php\">Work</a></li>
+    <li><a href=\"demo.php\">Demo</a></li>
   </ul>
 </nav>
 </header>");
