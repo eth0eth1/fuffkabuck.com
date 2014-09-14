@@ -10,12 +10,12 @@
 
 		<div> <!--3D Work-->
 
-		<h2 class="previewText">3D Work</h2>
+		<h2>3D Work</h2>
 
 		</div>
 
 		<div> <!--Graphic WOrk-->
-		<h2 class="previewText">Graphic Work</h2>
+		<h2>Graphic Work</h2>
 
 		</div>
 
