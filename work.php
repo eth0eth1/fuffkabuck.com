@@ -36,6 +36,25 @@
 		<div> <!--Graphic WOrk-->
 		<h2>Graphic Work</h2>
 
+			<!--Preview Buttons | Placeholder images so far-->
+			<a href="weathergrid.html">
+			<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
+			>
+			</div>
+			</a>
+
+			<a href="weathergrid.html">
+			<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
+			>
+			</div>
+			</a>
+
+			<a href="weathergrid.html">
+			<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
+			>
+			</div>
+			</a>
+
 		</div>
 
 
