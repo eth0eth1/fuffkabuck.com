@@ -10,9 +10,22 @@
 
 		<div> <!--3D Work-->
 
-		<h2>3D Work</h2>
+			<h2>3D Work</h2> <!--Section head-->
 
-		</div>
+			<!--Preview Buttons | Placeholder images so far-->
+			<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
+			>
+			</div>
+
+			<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
+			>
+			</div>
+
+			<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
+			>
+			</div>
+
+
 
 		<div> <!--Graphic WOrk-->
 		<h2>Graphic Work</h2>
