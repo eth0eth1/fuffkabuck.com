@@ -19,6 +19,14 @@ h1 {
 	line-height: 100%;
 }
 
+h2{
+	color: white; 
+	top:66%;
+	font-size: 24px;  
+   	background: rgb(0, 0, 0); /* fallback color */
+   	background: rgba(0, 0, 0, 0.7);
+}
+
 h2.previewText {
 	position: absolute;
 	color: white; 
