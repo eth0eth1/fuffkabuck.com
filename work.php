@@ -5,9 +5,6 @@
 	<div class="content">
 
 
-		<p><center>Page under construction. Check back soon.</center></p>
-		<img class="Banner" src="img/ConstructionBanner.png">
-
 		<div> <!--3D Work-->
 
 			<h2>3D Work</h2> <!--Section head-->
@@ -30,7 +27,7 @@
 				>
 				</div>
 			</a>
-			
+
 		</div>
 
 
