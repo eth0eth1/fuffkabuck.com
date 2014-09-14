@@ -30,7 +30,7 @@
 			>
 			</div>
 			</a>
-
+		</div>
 
 
 		<div> <!--Graphic WOrk-->
