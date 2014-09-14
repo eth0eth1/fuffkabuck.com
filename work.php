@@ -11,46 +11,18 @@
 
 			<!--Preview Buttons | Placeholder images so far-->
 			
-				<div class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
-				>
-				</div>
-			
 
-			
-				<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
-				>
-				</div>
-			
-
-			
-				<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
-				>
-				</div>
 			
 
 		</div>
 
 
 		<div> <!--Graphic Work-->
-		<h2>Graphic Work</h2>
+			<h2>Graphic Work</h2>
 
 			<!--Preview Buttons | Placeholder images so far-->
 			
-				<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
-				>
-				</div>
-			
 
-			
-				<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
-				>
-				</div>
-			
-
-			
-				<div align="center" class="previewButton" stlye="background-image: url(img/testButton.jpg);cursor:hand;"
-				>
-				</div>
 			
 
 		</div>
