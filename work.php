@@ -5,7 +5,7 @@
 	<div class="content">
 
 
-		<div style="display:block;"> <!--3D Work-->
+		<div align="left"> <!--3D Work-->
 
 			<h2>3D Work</h2> <!--Section head-->
 
