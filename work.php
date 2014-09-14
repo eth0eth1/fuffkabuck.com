@@ -12,6 +12,7 @@
 			<!--Preview Buttons | Placeholder images so far-->
 
 			<div class="previewButton;">
+				<h2 class="previewText"> Test Text</h2>
 			</div>
 
 
