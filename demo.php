@@ -8,7 +8,7 @@ require "header.php";
         <p><center>Below are all available demos to view.</center> </p>
 
         <a href="weathergrid.html">
-        <div align="center" class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;"
+        <div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;"
         >
 
             <!--<img src="img/testButton.jpg"> -->
