@@ -20,7 +20,7 @@ h1 {
 }
 
 h2{
-	
+
 	color: white; 
 	top:66%;
 	font-size: 24px;  
@@ -106,6 +106,7 @@ div.content {
 }
 
 .previewButton{
+	
 	position: relative;
 	float:left;
 	width:30%;

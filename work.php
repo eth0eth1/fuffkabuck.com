@@ -10,9 +10,11 @@
 			<h2>3D Work</h2> <!--Section head-->
 
 			<!--Preview Buttons | Placeholder images so far-->
-			
 
-			
+			<div class="previewButton;">
+			</div>
+
+
 
 		</div>
 
@@ -21,8 +23,6 @@
 			<h2>Graphic Work</h2>
 
 			<!--Preview Buttons | Placeholder images so far-->
-			
-
 			
 
 		</div>
