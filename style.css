@@ -19,7 +19,7 @@ h1 {
 	line-height: 100%;
 }
 
-h2 {
+h2.previewText {
 	position: absolute;
 	color: white; 
 	top:66%;
