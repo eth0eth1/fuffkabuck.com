@@ -12,7 +12,7 @@ require "header.php";
         >
 
             <!--<img src="img/testButton.jpg"> -->
-            <h2.previewText>Weather Based Pixel Grid</h2.previewText>
+            <h2 class="previewText">Weather Based Pixel Grid</h2>
          </div>
          </a>
 
