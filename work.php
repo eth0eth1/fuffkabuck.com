@@ -19,13 +19,13 @@
 
 			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
-				<h2>Test Text</h2>
+				<h2 class="previewText">Test Text</h2>
 
 			</div>
 
 			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
-				<h2>Test Text</h2>
+				<h2 class="previewText">Test Text</h2>
 
 			</div>
 
@@ -35,19 +35,25 @@
 
 
 		<div> <!--Graphic Work-->
-			<h2 class="inPageHeader">Graphic Work</h2>
+			<h2>Graphic Work</h2>
 
 			<!--Preview Buttons | Placeholder images so far-->
 
 			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
-			</div>
-
-			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;">
+				<h2 class="previewText">Test Text</h2>
 
 			</div>
 
 			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;">
+
+				<h2 class="previewText">Test Text</h2>
+
+			</div>
+
+			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;">
+
+				<h2 class="previewText">Test Text</h2>
 
 			</div>			
 
