@@ -7,13 +7,13 @@
 
 		<div> <!--3D Work-->
 
-			<h2 class="inPageHeader">3D Work</h2> <!--Section head-->
+			<h2>3D Work</h2> <!--Section head-->
 
 			<!--Preview Buttons | Placeholder images so far-->
 
 			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
-				<h2>Test Text</h2>
+				<h2 class="previewText">Test Text</h2>
 
 			</div>
 
@@ -39,15 +39,15 @@
 
 			<!--Preview Buttons | Placeholder images so far-->
 
-			<div class="previewButton;" style="background-image: url(img/testButton.jpg);cursor:hand;">
+			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
 			</div>
 
-			<div class="previewButton;" style="background-image: url(img/testButton.jpg);cursor:hand;">
+			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
 			</div>
 
-			<div class="previewButton;" style="background-image: url(img/testButton.jpg);cursor:hand;">
+			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
 			</div>			
 
