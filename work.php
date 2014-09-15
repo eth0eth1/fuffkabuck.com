@@ -13,20 +13,20 @@
 
 			<div class="previewButton;" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
-				<h2 class="previewText">Test Text</h2>
+				<h2>Test Text</h2>
 
 			</div>
 
 			<div class="previewButton;" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
-				<h2 class="previewText">Test Text</h2>
+				<h2>Test Text</h2>
 
 			</div>
 
 			<div class="previewButton;" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
-				<h2 class="previewText">Test Text</h2>
-				
+				<h2>Test Text</h2>
+
 			</div>
 
 
