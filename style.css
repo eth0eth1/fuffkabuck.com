@@ -39,7 +39,8 @@ h2.previewText {
 
 h2.inPageHeader
 {
-	display: inline;
+	
+	text-decoration: underline;
 	color: white; 
 	top:66%;
 	font-size: 24px;  
