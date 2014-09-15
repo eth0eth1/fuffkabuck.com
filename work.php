@@ -11,15 +11,15 @@
 
 			<!--Preview Buttons | Placeholder images so far-->
 
-			<div class="previewButton;" style="background-image: url(img/testButton.jpg);cursor:hand;">
+			<div class="inPageHeaderDiv;" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
 			</div>
 
-			<div class="previewButton;" style="background-image: url(img/testButton.jpg);cursor:hand;">
+			<div class="inPageHeaderDiv;" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
 			</div>
 
-			<div class="previewButton;" style="background-image: url(img/testButton.jpg);cursor:hand;">
+			<div class="inPageHeaderDiv;" style="background-image: url(img/testButton.jpg);cursor:hand;">
 
 			</div>
 
