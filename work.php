@@ -5,6 +5,8 @@
 	<div class="content">
 
 
+	<h2>3D Work</h2>
+
 		<div> <!--3D Work-->
 
 			<!--Preview Buttons | Placeholder images so far-->
@@ -31,7 +33,8 @@
 
 		</div>
 
-
+		<h2>3D Work</h2>
+		
 		<div> <!--Graphic Work-->
 
 			<!--Preview Buttons | Placeholder images so far-->
