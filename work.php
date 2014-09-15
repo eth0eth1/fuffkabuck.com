@@ -29,10 +29,21 @@
 
 
 		<div> <!--Graphic Work-->
-			<h2>Graphic Work</h2>
+			<h2 class="inPageHeader">Graphic Work</h2>
 
 			<!--Preview Buttons | Placeholder images so far-->
-			
+
+			<div class="inPageHeaderDiv;" style="background-image: url(img/testButton.jpg);cursor:hand;">
+
+			</div>
+
+			<div class="inPageHeaderDiv;" style="background-image: url(img/testButton.jpg);cursor:hand;">
+
+			</div>
+
+			<div class="inPageHeaderDiv;" style="background-image: url(img/testButton.jpg);cursor:hand;">
+
+			</div>			
 
 		</div>
 
