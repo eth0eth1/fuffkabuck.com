@@ -29,13 +29,23 @@ h2{
 }
 
 h2.previewText {
-	display:inline;
 	position: absolute;
 	color: white; 
 	top:66%;
 	font-size: 24px;  
    	background: rgb(0, 0, 0); /* fallback color */
    	background: rgba(0, 0, 0, 0.7);
+}
+
+h2.inPageHeader
+{
+	display: inline;
+	color: white; 
+	top:66%;
+	font-size: 24px;  
+   	background: rgb(0, 0, 0); /* fallback color */
+   	background: rgba(0, 0, 0, 0.7);
+
 }
 
 h3 {
