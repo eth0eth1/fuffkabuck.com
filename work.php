@@ -7,7 +7,7 @@
 
 		<div> <!--3D Work-->
 
-			<h2 class="inPageHeader">3D Work</h2> <!--Section head-->
+			<div><h2 class="inPageHeader">3D Work</h2> <!--Section head--></div>
 
 			<!--Preview Buttons | Placeholder images so far-->
 
@@ -35,7 +35,7 @@
 
 
 		<div> <!--Graphic Work-->
-			<h2 class="inPageHeader">Graphic Work</h2>
+			<div><h2 class="inPageHeader">Graphic Work</h2></div>
 
 			<!--Preview Buttons | Placeholder images so far-->
 
