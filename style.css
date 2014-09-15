@@ -128,6 +128,10 @@ div.content {
 	background-color: white;
 }
 
+.previewButtonContainer{
+	display:block;
+}
+
 .inPageHeaderDiv{
 	width: 100%;
 	display:inline;
