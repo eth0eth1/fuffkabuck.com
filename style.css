@@ -135,6 +135,6 @@ div.content {
 
 .inPageHeaderDiv{
 	width: 100%;
-	display:inline;
+	display:block;
 
 }
