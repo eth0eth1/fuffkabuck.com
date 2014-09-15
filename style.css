@@ -130,10 +130,11 @@ div.content {
 
 .previewButtonContainer{
 	display:block;
+	width:100%;
 }
 
 .inPageHeaderDiv{
 	width: 100%;
-	display:block;
+	display:inline;
 
 }
