@@ -5,9 +5,9 @@
 	<div class="content">
 
 
-	<h2 class="inPageHeader">3D Work</h2>
+	<h2 class="inPageHeaderDiv">3D Work</h2>
 
-		<div> <!--3D Work-->
+		<div class="inPageHeader"> <!--3D Work-->
 
 			<!--Preview Buttons | Placeholder images so far-->
 
@@ -33,9 +33,9 @@
 
 		</div>
 
-		<h2 class="inPageHeader">3D Work</h2>
+		<h2 class="inPageHeaderDiv">3D Work</h2>
 
-		<div> <!--Graphic Work-->
+		<div class="inPageHeader"> <!--Graphic Work-->
 
 			<!--Preview Buttons | Placeholder images so far-->
 
