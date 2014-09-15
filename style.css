@@ -29,6 +29,7 @@ h2{
 }
 
 h2.previewText {
+	display:inline;
 	position: absolute;
 	color: white; 
 	top:66%;
