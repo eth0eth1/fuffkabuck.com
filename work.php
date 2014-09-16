@@ -18,7 +18,7 @@
 		</div>
 
 
-	<h2>3D Work</h2>
+	<h2 class="inPageHeader">3D Work</h2>
 
 		
 
