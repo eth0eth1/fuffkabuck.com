@@ -102,7 +102,6 @@ div.content {
 .previewButton{
 	display:inline-block;
 	width:30%;
-	padding-top: 30%;
 	margin:1%;
 	/*background-color: white;*/
 }
@@ -110,6 +109,7 @@ div.content {
 .previewButton.fluid{
 	display:inline-block;
 	width:30%;
+	height: 200px;
 	margin:1%;
 	/*background-color: white;*/
 
