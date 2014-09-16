@@ -119,3 +119,8 @@ h2.previewText {
    	background: rgb(0, 0, 0); /* fallback color */
    	background: rgba(0, 0, 0, 0.7);
 }
+
+.previewImage {
+	max-height: 100%;
+	max-width: 100%;
+}
