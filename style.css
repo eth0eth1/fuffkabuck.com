@@ -99,11 +99,17 @@ div.content {
 	clear:right
 }
 
-
 .previewButton{
 	display:inline-block;
 	width:30%;
 	padding-top: 30%;
+	margin:1%;
+	/*background-color: white;*/
+}
+
+.previewButton.fluid{
+	display:inline-block;
+	width:30%;
 	margin:1%;
 	/*background-color: white;*/
 
