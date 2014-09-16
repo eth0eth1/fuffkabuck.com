@@ -35,17 +35,6 @@ h2.previewText {
    	background: rgba(0, 0, 0, 0.7);
 }
 
-h2.inPageHeader
-{
-	width:100%;
-	text-decoration: underline;
-	color: white; 
-	font-size: 24px;  
-   	background: rgb(0, 0, 0); /* fallback color */
-   	background: rgba(0, 0, 0, 0.7);
-
-}
-
 h3 {
 	margin:0.75em;
 	font-size:1em;
@@ -116,12 +105,12 @@ div.content {
 
 .previewButton{
 	
-	position: relative;
-	float:left;
+	display:inline-block;
 	width:30%;
 	height:200px;
 	margin:1%;
 	background-color: white;
+
 }
 
 h2.previewText {
