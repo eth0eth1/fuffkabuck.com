@@ -40,7 +40,7 @@ h2.previewText {
 h2.inPageHeader
 {
 	float:left;
-	display: inline;
+	display: block;
 	text-decoration: underline;
 	color: white; 
 	top:66%;

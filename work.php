@@ -5,7 +5,7 @@
 	<div class="content">
 
 
-	<h2>Graphic Work</h2>
+	<h2 class="inPageHeader">Graphic Work</h2>
 
 
 		<div class="previewButton">
