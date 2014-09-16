@@ -103,10 +103,15 @@ div.content {
 	float:center;
 }
 
+
 .previewButton{
 	display:inline-block;
 	width:30%;
 	margin:1%;
+}
+
+.previewButton.fluid{
+	padding-top: 30%;
 	/*background-color: white;*/
 
 }
@@ -120,5 +125,6 @@ h2.previewText {
 }
 
 .previewImage {
+
 	max-width: 100%;
 }
