@@ -16,6 +16,24 @@ require "header.php";
          </div>
          </a>
 
+         <a href="weathergrid.html">
+        <div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;"
+        >
+
+            <!--<img src="img/testButton.jpg"> -->
+            <h2 class="previewText">Weather Based Pixel Grid</h2>
+         </div>
+         </a>
+
+         <a href="weathergrid.html">
+        <div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;"
+        >
+
+            <!--<img src="img/testButton.jpg"> -->
+            <h2 class="previewText">Weather Based Pixel Grid</h2>
+         </div>
+         </a>
+
 
     </div>
 </article>
