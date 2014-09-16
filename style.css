@@ -20,7 +20,7 @@ h1 {
 }
 
 h2{
-	display: block;
+	display: inline;
 	color: white; 
 	top:66%;
 	font-size: 24px;  
