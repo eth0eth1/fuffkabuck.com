@@ -39,11 +39,9 @@ h2.previewText {
 
 h2.inPageHeader
 {
-	float:left;
-	display: block;
+	width:100%;
 	text-decoration: underline;
 	color: white; 
-	top:66%;
 	font-size: 24px;  
    	background: rgb(0, 0, 0); /* fallback color */
    	background: rgba(0, 0, 0, 0.7);
