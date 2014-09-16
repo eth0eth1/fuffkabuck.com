@@ -18,8 +18,6 @@
 		<div class="previewButton">
 		</div>
 
-	</div>
-
 
 	<h2 class="inPageHeaderDiv">3D Work</h2>
 
