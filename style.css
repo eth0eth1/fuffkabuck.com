@@ -130,7 +130,8 @@ div.content {
 
 h2.previewText {
 	position: absolute;
-	float: left;
+	bottom:0px;
+	left: 0px;
 	color: white; 
 	font-size: 24px;  
    	background: rgb(0, 0, 0); /* fallback color */
