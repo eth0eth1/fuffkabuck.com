@@ -106,7 +106,6 @@ div.content {
 .previewButton{
 	display:inline-block;
 	width:30%;
-	padding-top: 30%;
 	margin:1%;
 	/*background-color: white;*/
 
@@ -121,7 +120,5 @@ h2.previewText {
 }
 
 .previewImage {
-	top:0px;
-	left:0px;
 	max-width: 100%;
 }
