@@ -99,18 +99,8 @@ div.content {
 	clear:right
 }
 
-.demoButton {
-	float:center;
-}
-
 
 .previewButton{
-	display:inline-block;
-	width:30%;
-	margin:1%;
-}
-
-.previewButton.fluid{
 	display:inline-block;
 	width:30%;
 	padding-top: 30%;
