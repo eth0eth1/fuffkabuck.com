@@ -5,7 +5,7 @@
 	<div class="content">
 
 
-	<h2 class="inPageHeader">Graphic Work</h2>
+	<div class="inPageHeader"></div><h2>Graphic Work</h2></div>
 
 		<div class="previewButton">
 		</div>
@@ -17,7 +17,7 @@
 		</div>
 
 
-	<h2 class="inPageHeader">3D Work</h2>
+	<div class="inPageHeader"><h2>3D Work</h2>
 
 		<div class="previewButton">
 		</div>
