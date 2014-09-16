@@ -4,7 +4,7 @@
 <article>
 	<div class="content">
 
-
+	
 	<div class="inPageHeader"><h2>Graphic Work</h2></div>
 
 		<div class="previewButton">
