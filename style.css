@@ -113,8 +113,7 @@ div.content {
 }
 
 h2.previewText {
-	position: absolute;
-	top: 66%;
+	position: inherit;
 	color: white; 
 	font-size: 24px;  
    	background: rgb(0, 0, 0); /* fallback color */
