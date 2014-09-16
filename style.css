@@ -121,6 +121,7 @@ h2.previewText {
 }
 
 .previewImage {
-	position: inherit;
+	top:0px;
+	left:0px;
 	max-width: 100%;
 }
