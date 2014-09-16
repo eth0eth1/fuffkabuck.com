@@ -131,7 +131,7 @@ div.content {
 .previewButton.previewText {
 	position: absolute;
 	color: white; 
-	top:66%;
+	bottom: 60%;
 	left:0px;
 	font-size: 24px;  
    	background: rgb(0, 0, 0); /* fallback color */
