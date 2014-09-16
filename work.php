@@ -7,18 +7,15 @@
 
 	<h2 class="inPageHeaderDiv">Graphic Work</h2>
 
-		<div>
-			<div style="display:block; width:100%">
+		<div style="display:block; width:100%">
 
-			<div class="previewButton">
-			</div>
+		<div class="previewButton">
+		</div>
 
-			<div class="previewButton">
-			</div>
+		<div class="previewButton">
+		</div>
 
-			<div class="previewButton">
-			</div>
-
+		<div class="previewButton">
 		</div>
 
 	</div>
