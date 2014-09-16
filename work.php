@@ -10,7 +10,7 @@
 			<div class="previewButton"></div>
 
 			<h2>3D Work</h2>
-			<div class="previewButton" style="background-image: url(img/testButton.jpg);cursor:hand;"></div>
+			<div class="previewButton" style="background-image: url(img/ThumbFIPreviewCollection.png);cursor:hand;"></div>
 			<div class="previewButton"></div>
 			<div class="previewButton"></div>
 	</div>
