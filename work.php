@@ -7,13 +7,13 @@
 
 	<h2 class="inPageHeader">Graphic Work</h2>
 
-		<div style="float:left; width:30%; margin:1%; background-color:white;">
+		<div class="previewButton">
 		</div>
 
-		<div style="float:left; width:30%; margin:1%; background-color:white;">
+		<div class="previewButton">
 		</div>
 
-		<div style="float:left; width:30%; margin:1%; background-color:white;">
+		<div class="previewButton">
 		</div>
 
 
