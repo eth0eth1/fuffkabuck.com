@@ -8,7 +8,7 @@ require "header.php";
         <p><center>Below are all available demos to view.</center> </p>
 
         <a href="weathergrid.html">
-        <div class="previewButton.fluid" style="background-image: url(img/testButton.jpg);cursor:hand;"
+        <div class="previewButtonfluid" style="background-image: url(img/testButton.jpg);cursor:hand;"
         >
 
             <!--<img src="img/testButton.jpg"> -->
@@ -17,7 +17,7 @@ require "header.php";
          </a>
 
          <a href="weathergrid.html">
-        <div class="previewButton.fluid" style="background-image: url(img/testButton.jpg);cursor:hand;"
+        <div class="previewButtonfluid" style="background-image: url(img/testButton.jpg);cursor:hand;"
         >
 
             <!--<img src="img/testButton.jpg"> -->
@@ -26,7 +26,7 @@ require "header.php";
          </a>
 
          <a href="weathergrid.html">
-        <div class="previewButton.fluid" style="background-image: url(img/testButton.jpg);cursor:hand;"
+        <div class="previewButtonfluid" style="background-image: url(img/testButton.jpg);cursor:hand;"
         >
 
             <!--<img src="img/testButton.jpg"> -->
