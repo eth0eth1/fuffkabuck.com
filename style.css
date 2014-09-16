@@ -128,7 +128,7 @@ div.content {
 	background-color: white;
 }
 
-.previewButton.previewText {
+h2.previewText {
 	position: absolute;
 	float: left;
 	color: white; 
