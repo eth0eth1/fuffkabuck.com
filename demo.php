@@ -12,7 +12,7 @@ require "header.php";
         >
 
             <!--<img src="img/testButton.jpg"> -->
-            <h2 class="previewText">Weather Based Pixel Grid</h2>
+            <h2 class="previewButton.previewText">Weather Based Pixel Grid</h2>
          </div>
          </a>
 
@@ -21,7 +21,7 @@ require "header.php";
         >
 
             <!--<img src="img/testButton.jpg"> -->
-            <h2 class="previewText">Weather Based Pixel Grid</h2>
+            <h2 class="previewButton.previewText">Weather Based Pixel Grid</h2>
          </div>
          </a>
 
@@ -30,7 +30,7 @@ require "header.php";
         >
 
             <!--<img src="img/testButton.jpg"> -->
-            <h2 class="previewText">Weather Based Pixel Grid</h2>
+            <h2 class=".previewButton.previewText">Weather Based Pixel Grid</h2>
          </div>
          </a>
 
@@ -39,7 +39,7 @@ require "header.php";
         >
 
             <!--<img src="img/testButton.jpg"> -->
-            <h2 class="previewText">Weather Based Pixel Grid</h2>
+            <h2 class="previewButton.previewText">Weather Based Pixel Grid</h2>
          </div>
          </a>
 

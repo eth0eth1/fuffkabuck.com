@@ -127,3 +127,13 @@ div.content {
 	margin:1%;
 	background-color: white;
 }
+
+.previewButton.previewText {
+	position: absolute;
+	color: white; 
+	top:66%;
+	left:0px;
+	font-size: 24px;  
+   	background: rgb(0, 0, 0); /* fallback color */
+   	background: rgba(0, 0, 0, 0.7);
+}
