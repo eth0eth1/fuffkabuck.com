@@ -114,7 +114,7 @@ div.content {
 }
 
 h2.previewText {
-	position: absolute;
+	position: inherit;
 	bottom:0px;
 	left: 0px;
 	color: white; 
