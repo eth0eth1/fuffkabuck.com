@@ -27,8 +27,7 @@ h2{
 }
 
 h2.previewText {
-	position: absolute;
-	top:66%;
+	position: inherit;
 	color: white; 
 	font-size: 1.5em;  
    	background: rgb(0, 0, 0); /* fallback color */
