@@ -34,8 +34,6 @@ require "header.php";
          </div>
          </a>
 
-         <p>Test Text</p>
-
 
     </div>
 </article>
