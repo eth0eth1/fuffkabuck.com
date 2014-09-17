@@ -13,7 +13,10 @@
 			<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=314000062">
 			<div class="previewButton"><img class="previewImage" src="img/ThumbFICollectionPreview.png" alt="TF2FICollectionPreview"></div>
 			</a>
+
+			<a href="nollpage.php">
 			<div class="previewButton"></div>
+			</a>
 			<div class="previewButton"></div>
 	</div>
 </article>
