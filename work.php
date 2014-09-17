@@ -15,7 +15,7 @@
 			</a>
 
 			<a href="nollpage.php">
-			<div class="previewButton"></div>
+			<div class="previewButton"><img class="previewImage" src="img/ThumbFICollectionPreview.png" alt="TF2FICollectionPreview"></div>
 			</a>
 			<div class="previewButton"></div>
 	</div>
