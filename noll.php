@@ -28,10 +28,9 @@ var msnry = new Masonry(container, {
 	columnWidth:150,
 	itemSelector: '.item'
 });
-imagesLoaded( container, function() {
-	document.getElementById("container").innerHTML = "Javascript function is doing stuff";
-  	msnry.layout();
-});
+
+ window.onload = msnry.layout();
+
 </script>
 
 <?php
