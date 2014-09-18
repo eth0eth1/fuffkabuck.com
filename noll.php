@@ -19,7 +19,7 @@ require "header.php";
 </div>
 </article>
 
-<script src="/lib/masonry.pkgd.min.js"></script>
+<script src="lib/masonry.pkgd.min.js"></script>
 
 <script>
 alert("Test");
