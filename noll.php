@@ -20,6 +20,7 @@ require "header.php";
 </article>
 
 <script src="masonry.pkgd.min.js"></script>
+<script src="imagesloaded.pkgd.min.js"></script>
 
 <script>
 document.getElementById("container").innerHTML = "Paragraph changed.";
@@ -28,9 +29,10 @@ var msnry = new Masonry(container, {
 	columnWidth:150,
 	itemSelector: '.item'
 });
-
- window.onload = msnry.layout();
-
+imagesLoaded( container, function() {
+	document.getElementById("container").innerHTML = "Javascript function is doing stuff";
+  	msnry.layout();
+});
 </script>
 
 <?php
