@@ -2,17 +2,6 @@
 require "header.php";
 ?>
 
-<script src="masonry.pkgd.min.js">
-var container = document.quertSelector('#container');
-var msnry = new masonry(container, {
-	columnWidth:150,
-	itemSelector: '.item'
-});
-imagesLoaded( container, function() {
-  msnry.layout();
-});
-</script>
-
 <article>
 
 <div class="content">
@@ -29,6 +18,18 @@ imagesLoaded( container, function() {
 
 </div>
 </article>
+
+<script src="masonry.pkgd.min.js">
+var container = document.quertSelector('#container');
+var msnry = new Masonry(container, {
+	columnWidth:150,
+	itemSelector: '.item'
+});
+imagesLoaded( container, function() {
+  msnry.layout();
+});
+</script>
+
 <?php
 require "footer.php";
 ?>
