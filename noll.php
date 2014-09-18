@@ -19,16 +19,20 @@ require "header.php";
 </div>
 </article>
 
+<script>
+document.getElementById("container").innerHTML = "Paragraph changed.";
+</script>
+
 <script src="masonry.pkgd.min.js">
 alert("Test");
-document.getElementById("content").innerHTML = "Paragraph changed.";
+document.getElementById("container").innerHTML = "Paragraph changed.";
 var container = document.quertSelector('#container');
 var msnry = new Masonry(container, {
 	columnWidth:150,
 	itemSelector: '.item'
 });
 imagesLoaded( container, function() {
-	document.getElementById("content").innerHTML = "Javascript function is doing stuff";
+	document.getElementById("container").innerHTML = "Javascript function is doing stuff";
   	msnry.layout();
 });
 </script>
