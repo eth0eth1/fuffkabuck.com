@@ -26,7 +26,8 @@ var msnry = new Masonry(container, {
 	itemSelector: '.item'
 });
 imagesLoaded( container, function() {
-  msnry.layout();
+	console.error(This function is doing something)
+  	msnry.layout();
 });
 </script>
 
