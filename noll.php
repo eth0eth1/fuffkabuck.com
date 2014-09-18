@@ -1,20 +1,21 @@
-<script src="masonry.pkgd.min.js"></script>
+<script src="masonry.pkgd.min.js"> //Masonry Initilisation. Waits for images to load before setting #Container as the msnry instance
+	
+var container = document.querySelector('container');
+var msnry;
+// initialize Masonry after all images have loaded
+imagesLoaded( container, function() {
+  msnry = new Masonry( container, {columnWidth:450, itemSelector: '.item'} );
+});
+</script>
+
 <?php
 require "header.php";
 ?>
 
 <article>
+
 <div class="content">
 
-<script> 
-var container = document.querySelector('#container');
-var msnry;
-// initialize Masonry after all images have loaded
-imagesLoaded( container, function() {
-  msnry = new Masonry( container, {columnWidth:200, itemSelector: '.item'} );
-});
-
-</script>
 
 	<div id="container">
 
