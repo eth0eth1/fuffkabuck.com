@@ -19,10 +19,9 @@ require "header.php";
 </div>
 </article>
 
-<script src="lib/masonry.pkgd.min.js"></script>
+<script src="masonry.pkgd.min.js"></script>
 
 <script>
-alert("Test");
 document.getElementById("container").innerHTML = "Paragraph changed.";
 var container = document.quertSelector('#container');
 var msnry = new Masonry(container, {
