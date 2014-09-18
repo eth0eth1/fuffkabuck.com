@@ -19,9 +19,6 @@ require "header.php";
 </div>
 </article>
 
-<script>
-document.getElementById("container").innerHTML = "Paragraph changed.";
-</script>
 
 <script src="masonry.pkgd.min.js">
 alert("Test");
