@@ -20,7 +20,7 @@ require "header.php";
 </article>
 
 <script src="masonry.pkgd.min.js">
-console.error(Javascript is running)
+alert("Test");
 var container = document.quertSelector('#container');
 var msnry = new Masonry(container, {
 	columnWidth:150,
