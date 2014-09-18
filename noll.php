@@ -1,4 +1,4 @@
-<script src="/path/to/masonry.pkgd.min.js"></script>
+<script src="masonry.pkgd.min.js"></script>
 <?php
 require "header.php";
 ?>
