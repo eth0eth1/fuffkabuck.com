@@ -1,3 +1,7 @@
+<?php
+require "header.php";
+?>
+
 <script src="masonry.pkgd.min.js"> //Masonry Initilisation. Waits for images to load before setting #Container as the msnry instance
 	
 var container = document.querySelector('#container');
@@ -7,10 +11,6 @@ imagesLoaded( container, function() {
   msnry = new Masonry( container );
 });
 </script>
-
-<?php
-require "header.php";
-?>
 
 <article>
 
