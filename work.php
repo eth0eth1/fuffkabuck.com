@@ -14,7 +14,7 @@
 			<div class="previewButton"><img class="previewImage" src="img/ThumbFICollectionPreview.png" alt="TF2FICollectionPreview"></div>
 			</a>
 
-			<a href="nollpage.php">
+			<a href="noll.php">
 			<div class="previewButton"><img class="previewImage" src="img/ThumbFICollectionPreview.png" alt="TF2FICollectionPreview"></div>
 			</a>
 			<div class="previewButton"></div>
