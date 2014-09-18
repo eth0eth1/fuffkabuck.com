@@ -10,6 +10,7 @@ var msnry = new Masonry(container, {
 });
 imagesLoaded( container, function() {
   msnry.layout();
+});
 </script>
 
 <article>
