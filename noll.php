@@ -21,6 +21,7 @@ require "header.php";
 
 <script src="masonry.pkgd.min.js">
 alert("Test");
+console.log(This function is doing something)
 var container = document.quertSelector('#container');
 var msnry = new Masonry(container, {
 	columnWidth:150,
