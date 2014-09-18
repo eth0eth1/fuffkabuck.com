@@ -15,7 +15,7 @@
 			</a>
 
 			<a href="noll.php">
-			<div class="previewButton"><img class="previewImage" src="img/ThumbFICollectionPreview.png" alt="TF2FICollectionPreview"></div>
+			<div class="previewButton"><img class="previewImage" src="img/Thumbnoll.png" alt="TF2FICollectionPreview"></div>
 			</a>
 			<div class="previewButton"></div>
 	</div>
