@@ -22,8 +22,9 @@ require "header.php";
 
 <script>
 var container = document.quertSelector('#container');
+var msnry = new Masonry(container);
 imagesLoaded( container, function() {
-  container.layout();
+  msnry.layout();
 </script>
 
 </div>
