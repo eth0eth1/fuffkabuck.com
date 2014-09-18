@@ -20,7 +20,7 @@ require "header.php";
 </article>
 
 
-<script src="masonry.pkgd.min.js">
+<script src="/lib/masonry.pkgd.min.js">
 alert("Test");
 document.getElementById("container").innerHTML = "Paragraph changed.";
 var container = document.quertSelector('#container');
