@@ -4,7 +4,7 @@ require "header.php";
 
 <script src="masonry.pkgd.min.js">
 var container = document.quertSelector('#container');
-var msnry = new Masonry(container, {
+var msnry = new masonry(container, {
 	columnWidth:150,
 	itemSelector: '.item'
 });
