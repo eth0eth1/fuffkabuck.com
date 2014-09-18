@@ -21,14 +21,14 @@ require "header.php";
 
 <script src="masonry.pkgd.min.js">
 alert("Test");
-console.log(This function is doing something)
+document.getElementById("content").innerHTML = "Paragraph changed.";
 var container = document.quertSelector('#container');
 var msnry = new Masonry(container, {
 	columnWidth:150,
 	itemSelector: '.item'
 });
 imagesLoaded( container, function() {
-	console.error(This function is doing something)
+	document.getElementById("content").innerHTML = "Javascript function is doing stuff";
   	msnry.layout();
 });
 </script>
