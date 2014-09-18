@@ -18,7 +18,7 @@ require "header.php";
 
 
 	<div id="container">
-		<iframe width="600" height="600" src="https://sketchfab.com/models/adf631c73bdf4e4db53fe0cc9c20fbb1/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+		<iframe class="item" width="600" height="600" src="https://sketchfab.com/models/adf631c73bdf4e4db53fe0cc9c20fbb1/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
 		<img class="item" src="img/NollPoseWork.jpg" alt="Image showing design work from Noll project">
 		<img class="item" src="img/TreasureNoll.jpg" alt="Image showing design work from Noll project">
 		<img class="item" src="img/DesignNoll.jpg" alt="Image showing design work from Noll project">
