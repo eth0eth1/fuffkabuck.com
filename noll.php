@@ -23,7 +23,7 @@ require "header.php";
 
 <script>
 document.getElementById("container").innerHTML = "Paragraph changed.";
-var container = document.quertSelector('#container');
+var container = document.querySelector('#container');
 var msnry = new Masonry(container, {
 	columnWidth:150,
 	itemSelector: '.item'
