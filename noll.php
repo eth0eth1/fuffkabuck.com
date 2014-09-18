@@ -3,6 +3,13 @@ require "header.php";
 ?>
 
 <script src="masonry.pkgd.min.js">
+var container = document.quertSelector('#container');
+var msnry = new Masonry(container, {
+	columnWidth:150,
+	itemSelector: '.item'
+});
+imagesLoaded( container, function() {
+  msnry.layout();
 </script>
 
 <article>
@@ -18,16 +25,6 @@ require "header.php";
 		<div class="item"><img src="img/TechnicalNoll.jpg" alt="Image showing design work from Noll project"></div>
 
 	</div>
-
-<script>
-var container = document.quertSelector('#container');
-var msnry = new Masonry(container, {
-	columnWidth:150,
-	itemSelector: '.item'
-});
-imagesLoaded( container, function() {
-  msnry.layout();
-</script>
 
 </div>
 </article>
