@@ -6,8 +6,16 @@ require "header.php";
 <article>
 <div class="content">
 
-	<div id="container" class="js-masonry"
-		data-masonry-options='{ "columnWidth":450, "itemselector": "item"}'>
+<script> 
+var container = document.querySelector('#container');
+
+imagesLoaded( container, function() {
+	msnry = new Masonry( container );
+});
+
+</script>
+
+	<div id="container"
 
 		<iframe width="600" height="600" src="https://sketchfab.com/models/adf631c73bdf4e4db53fe0cc9c20fbb1/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
 		<img class="item" src="img/NollPoseWork.jpg" alt="Image showing design work from Noll project">
@@ -15,7 +23,7 @@ require "header.php";
 		<img class="item" src="img/DesignNoll.jpg" alt="Image showing design work from Noll project">
 		<img class="item" src="img/TechnicalNoll.jpg" alt="Image showing design work from Noll project">
 
-</div>
+	</div>
 
 
 
