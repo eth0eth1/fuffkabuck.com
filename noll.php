@@ -1,6 +1,7 @@
 <?php
 require "header.php";
 ?>
+<script src="/path/to/masonry.pkgd.min.js"></script>
 
 <article>
 <div class="content">
