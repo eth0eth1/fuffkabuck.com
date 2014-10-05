@@ -1,6 +1,7 @@
 <?php
 print("<!DOCTYPE html>
 <head>
+<meta name=\"google-site-verification\" content=\"3KXaq2DsXyKV9SSJ1auOpxiFR9wTSQk8wawu_0Ar820\" /> <!--GoogleApps Meta Tag-->
 <link rel=\"stylesheet\" href=\"style.css\" />
 <link rel=\"stylesheet\" href=\"http://fonts.googleapis.com/css?family=Open+Sans:400,300\" />
 <meta charset=\"UTF-8\"/>
