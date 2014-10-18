@@ -52,7 +52,7 @@ var ctx = document.getElementById("weatherGrid").getContext("2d");
 
 var weather;
 //alert(location);
-getWeather(<?php echo $City; ?>);
+getWeather(String(<?php echo $City; ?>));
 
 
 window.setInterval(function(){
