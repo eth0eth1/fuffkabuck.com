@@ -50,7 +50,8 @@ geoplugin_currencyConverter
 var ctx = document.getElementById("weatherGrid").getContext("2d");
 
 var weather;
-getWeather(<?php echo $city; ?>);
+var location = <?php echo $city; ?>;
+getWeather(location);
 
 
 window.setInterval(function(){
