@@ -138,6 +138,7 @@ function getColor(str){
 
 function getWeather(loc){
     
+    alert(loc);
     if(typeof weather === 'undefined'){
 
         console.log("Getting weather from the internet...");
