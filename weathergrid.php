@@ -52,7 +52,7 @@ var ctx = document.getElementById("weatherGrid").getContext("2d");
 
 var weather;
 //alert(location);
-getWeather("Minsk");
+getWeather(<?php echo $City; ?>);
 
 
 window.setInterval(function(){
