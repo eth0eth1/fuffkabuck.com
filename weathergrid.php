@@ -52,7 +52,7 @@ var ctx = document.getElementById("weatherGrid").getContext("2d");
 
 var weather;
 //alert(location);
-var userLocation = <?php echo $city; ?>;
+var userLocation = String(<?php echo $city; ?>);
 getWeather("Sheffield");
 
 
