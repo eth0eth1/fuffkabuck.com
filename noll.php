@@ -22,6 +22,14 @@ require "header.php";
 <script src="masonry.pkgd.min.js"></script>
 <script src="imagesloaded.pkgd.min.js"></script>
 
+<script>
+var container = document.querySelector('#container');
+var msnry;
+// initialize Masonry after all images have loaded
+imagesLoaded( container, function() {
+  msnry = new Masonry( container );
+});
+</script>
 
 <?php
 require "footer.php";
