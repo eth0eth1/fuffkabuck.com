@@ -29,9 +29,9 @@ $country = $geo["geoplugin_countryName"];
 var ctx = document.getElementById("weatherGrid").getContext("2d");
 
 var weather;
-var location = <?php echo $city; ?>;
+var location = "Sheffield";
 //alert(location);
-getWeather(String(location);
+getWeather(location);
 
 
 window.setInterval(function(){
