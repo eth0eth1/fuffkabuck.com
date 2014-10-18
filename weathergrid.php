@@ -23,7 +23,6 @@ $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_i
 $city = $geo["geoplugin_city"];
 $region = $geo["geoplugin_regionName"];
 $country = $geo["geoplugin_countryName"];
-echo "City: ".$city."<br>";
 /*
 geoplugin_request
 geoplugin_status
