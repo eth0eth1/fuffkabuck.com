@@ -51,6 +51,7 @@ var ctx = document.getElementById("weatherGrid").getContext("2d");
 
 var weather;
 var location = <?php echo $city; ?>;
+alert(location);
 getWeather(String(location);
 
 
